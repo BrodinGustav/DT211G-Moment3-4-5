@@ -1,0 +1,144 @@
+body{
+    padding:100px;
+    padding-top:0;
+    padding-bottom:0;
+}
+
+header{
+display:flex;
+justify-content: space-between;
+align-items: center;
+background-color:lightblue;
+padding:0.5em;
+border-left: 0.5em solid black;    
+}
+
+h1{
+    color:azure;
+}
+
+nav{
+    background-color: aqua;
+    box-shadow: 0 0px 10px black;
+    font-size: 1.4em;
+    position:absolute;
+    right:3em;
+    top:0.5em;
+    height:50vh;
+    width:250px;
+    border-radius: 25%;
+    display:none;
+}
+
+nav ul{
+    width:100%;
+    list-style-type: none;
+    text-align:center;
+    margin:0 auto;
+    padding:0;
+}
+
+nav li{
+    padding:0.8em 0;
+    width:100%;
+}
+
+nav a {
+    color:black;
+    text-decoration: none;
+    padding: 0 1em;
+}
+
+nav a:hover {
+color: blue;
+text-decoration: underline;
+
+}
+
+    /*Öppna menyknapp*/
+    .menu-btn-open{
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        padding:15px 25px;
+        background-color: orange;
+        border: 2px solid white;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px black;
+    }
+
+    .open{
+        margin: 0 1em;
+    }
+
+    .menu-btn:hover{
+        background-color: orangered;
+        box-shadow: 0 0px 5px gainsboro;
+    }
+
+
+    /*bars*/
+    .bars{
+        display:block;
+        width: 40px;
+        height: 3px;
+        background: white;
+        margin: 5px;
+    }
+
+    .menu-text{
+        font-size: 1.2em;
+        color:white;
+    }
+
+    /*Stäng menyknapp*/
+    .close{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        margin-top:1em;
+        padding: 10px 15px;
+        background-color: orange;
+        border-radius: 50%;
+    }
+
+    /*Kryssbars*/
+    .cross1{
+        width:25px;
+        transform: rotate(45deg);
+        position:relative;
+        top:5px;
+        left:3px;
+    }
+
+    .cross2{
+        width:25px;
+        transform: rotate(135deg);
+        position:relative;
+        top: -3px;
+        left:3px;
+    }
+
+    .breadcrumbs{
+        display: flex;
+        align-items: center;
+    }
+
+    /*----------------------------*/
+
+    .picture-container{
+        display: flex;
+flex-wrap:wrap;
+        justify-content: center;
+        margin-top:5em;
+        gap:2em;
+    }
+
+    footer{
+        margin-top:10em;
+        background-color: lightblue;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        box-shadow: 1px 1px 1px 1px black;
+    }

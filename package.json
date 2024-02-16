@@ -2,10 +2,20 @@
   "name": "moment3",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "source": "src/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel",
+    "build": "parcel build"
   },
   "author": "Gustav Brodin",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "htmlnano": "^2.1.0",
+    "parcel": "^2.11.0",
+    "sharp": "^0.31.3",
+    "uglifyjs": "^2.4.11"
+  },
+  "dependencies": {
+    "uglifycss": "^0.0.29"
+  }
 }

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/src/css/style.css">
+    <script src="/src/js/main.js" type="module"></script>
+    <title>DT211G Moment3</title>
+</head>
+<header>
+    <h1>DT211G Moment 3</h1>
+    <button class="menu-btn-open" id="open-menu">
+            <span class="menu-icon">
+                <span class="bars"></span>
+                <span class="bars"></span>
+                <span class="bars"></span>
+        </span>
+        <span class="menu-text">Meny</span>
+    </button>
+    <!--navigering-->
+    <nav id="nav-menu">
+        <button class="menu-btn close" id="close-menu">
+            <span class="menu-icon">
+                <span class="bars cross1"></span>
+                <span class="bars cross2"></span>
+            </span>
+            <span class="menu-text">Stäng</span>
+        </button>
+        <ul>
+            <li><a href="sass">SASS</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="breadcrumbs">
+    <p>Du är här:</p><a href="index.html">Startssida/</a>
+</div>
+<body>
+    <div class="picture-container">
+        <picture>
+         <source srcset="/bilder/sleep.jpg?as=avif&width=450" type="image/avif">
+         <source srcset="/bilder/sleep.jpg?as=webp&width=450" type="image/webp">
+         <img src="/bilder/sleep.jpg" alt="Illustration över sömnbrist">
+        </picture>
+        <picture>
+            <source srcset="/bilder/zombi.jpg?as=avif&width=450" type="image/avif">
+            <source srcset="/bilder/zombi.jpg?as=webp&width=450" type="image/webp">
+            <img src="/bilder/zombi.jpg" alt="Illustration över en katastrof">
+           </picture>
+           <picture>
+            <source srcset="/bilder/kodapa.jpg?as=avif&width=450" type="image/avif">
+            <source srcset="/bilder/kodapa.jpg?as=webp&width=450" type="image/webp">
+            <img src="/bilder/kodapa.jpg" alt="Illustration över en programmerare">
+           </picture>
+           <picture>
+            <source srcset="/bilder/onion.jpg?as=avif&width=450" type="image/avif">
+            <source srcset="/bilder/onion.jpg?as=webp&width=450" type="image/webp">
+            <img src="/bilder/onion.jpg" alt="Illustration över en lökig situation">
+           </picture>
+    </div>
+</body>
+<footer>
+    <p>Gustav Brodin</p>
+    <p>DT211G</p>
+    <p>Moment 3</p>
+    <p>VT 2024</p>
+</footer>
+</html>

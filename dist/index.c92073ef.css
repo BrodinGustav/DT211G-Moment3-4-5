@@ -1,0 +1,135 @@
+body {
+  padding: 0 100px;
+}
+
+header {
+  background-color: #add8e6;
+  border-left: .5em solid #000;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5em;
+  display: flex;
+}
+
+h1 {
+  color: azure;
+}
+
+nav {
+  background-color: #0ff;
+  border-radius: 25%;
+  width: 250px;
+  height: 50vh;
+  font-size: 1.4em;
+  display: none;
+  position: absolute;
+  top: .5em;
+  right: 3em;
+  box-shadow: 0 0 10px #000;
+}
+
+nav ul {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+}
+
+nav li {
+  width: 100%;
+  padding: .8em 0;
+}
+
+nav a {
+  color: #000;
+  padding: 0 1em;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #00f;
+  text-decoration: underline;
+}
+
+.menu-btn-open {
+  cursor: pointer;
+  background-color: orange;
+  border: 2px solid #fff;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 25px;
+  display: flex;
+  box-shadow: 1px 1px 1px #000;
+}
+
+.open {
+  margin: 0 1em;
+}
+
+.menu-btn:hover {
+  background-color: #ff4500;
+  box-shadow: 0 0 5px #dcdcdc;
+}
+
+.bars {
+  background: #fff;
+  width: 40px;
+  height: 3px;
+  margin: 5px;
+  display: block;
+}
+
+.menu-text {
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.close {
+  background-color: orange;
+  border-radius: 50%;
+  flex-direction: column;
+  margin: 1em auto 0;
+  padding: 10px 15px;
+  display: flex;
+}
+
+.cross1 {
+  width: 25px;
+  position: relative;
+  top: 5px;
+  left: 3px;
+  transform: rotate(45deg);
+}
+
+.cross2 {
+  width: 25px;
+  position: relative;
+  top: -3px;
+  left: 3px;
+  transform: rotate(135deg);
+}
+
+.breadcrumbs {
+  align-items: center;
+  display: flex;
+}
+
+.picture-container {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  margin-top: 5em;
+  display: flex;
+}
+
+footer {
+  background-color: #add8e6;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 10em;
+  display: flex;
+  box-shadow: 1px 1px 1px 1px #000;
+}
+
+/*# sourceMappingURL=index.c92073ef.css.map */
