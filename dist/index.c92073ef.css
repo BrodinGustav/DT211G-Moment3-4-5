@@ -13,8 +13,31 @@ header {
   display: flex;
 }
 
+.logga {
+  border: 2px solid orange;
+  border-radius: 40%;
+  width: 3em;
+  height: auto;
+  padding: .5em;
+}
+
 h1 {
   color: azure;
+}
+
+h2 {
+  text-align: center;
+  background: linear-gradient(90deg, orange, #fff);
+  color: #0000;
+  -webkit-background-clip: text;
+  font-size: 36px;
+  font-weight: bold;
+  transition: background .5s;
+  display: inline-block;
+}
+
+.gradient-heading:hover {
+  background-position: 100% 0;
 }
 
 nav {
