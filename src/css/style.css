@@ -2,6 +2,8 @@ body{
     padding:100px;
     padding-top:0;
     padding-bottom:0;
+    background-color:lightgrey ;
+    font-size: 16px;
 }
 
 header{
@@ -52,9 +54,25 @@ nav a {
 nav a:hover {
 color: blue;
 text-decoration: underline;
-
 }
 
+
+.breadcrumbs{
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumbs p{
+    color: orange;
+    text-shadow: 1px 0.5px 0.5px black;
+    font-size:1.2em;
+    font-weight:500;
+}
+
+.breadcrumbs a{
+    margin-left: 0.2em;
+}
+/*----------------------------------*/
     /*Öppna menyknapp*/
     .menu-btn-open{
         display:flex;
@@ -119,19 +137,20 @@ text-decoration: underline;
         left:3px;
     }
 
-    .breadcrumbs{
-        display: flex;
-        align-items: center;
-    }
-
     /*----------------------------*/
 
     .picture-container{
         display: flex;
-flex-wrap:wrap;
+        flex-wrap:wrap;
         justify-content: center;
         margin-top:5em;
         gap:2em;
+    }
+
+    picture{
+        box-shadow: 1px 1px 1px 1px black;
+        height:100%;
+        background-color: white;
     }
 
     footer{

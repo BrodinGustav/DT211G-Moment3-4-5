@@ -1,5 +1,7 @@
 body {
+  background-color: #d3d3d3;
   padding: 0 100px;
+  font-size: 16px;
 }
 
 header {
@@ -50,6 +52,22 @@ nav a {
 nav a:hover {
   color: #00f;
   text-decoration: underline;
+}
+
+.breadcrumbs {
+  align-items: center;
+  display: flex;
+}
+
+.breadcrumbs p {
+  color: orange;
+  text-shadow: 1px .5px .5px #000;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.breadcrumbs a {
+  margin-left: .2em;
 }
 
 .menu-btn-open {
@@ -110,17 +128,18 @@ nav a:hover {
   transform: rotate(135deg);
 }
 
-.breadcrumbs {
-  align-items: center;
-  display: flex;
-}
-
 .picture-container {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2em;
   margin-top: 5em;
   display: flex;
+}
+
+picture {
+  background-color: #fff;
+  height: 100%;
+  box-shadow: 1px 1px 1px 1px #000;
 }
 
 footer {
