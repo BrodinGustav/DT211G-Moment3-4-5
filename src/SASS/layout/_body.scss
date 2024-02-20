@@ -1,0 +1,28 @@
+@use '../abstracts/base';
+@use '../themes/theme';
+
+body{
+background-color: base.$light-background;
+padding:base.$body-padding;
+padding-top:0;
+padding-bottom:0;
+font-size:base.$font-size;
+}
+
+  //Media query för mörkt läge
+  @media (prefers-color-scheme: dark) {
+    body{
+        background-color: base.$dark-background;
+        color: base.$dark-text;
+    }
+  }
+  
+  
+  // Media query för ljust läge 
+  @media (prefers-color-scheme: light) {
+    body{
+    background-color: base.$light-background;
+    color: base.$light-text;
+    }        
+}
+

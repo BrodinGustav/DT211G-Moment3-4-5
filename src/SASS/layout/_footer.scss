@@ -1,0 +1,12 @@
+@use '../abstracts/base';
+//@use '../themes/theme';
+
+footer{
+    background-color: base.$secondary-lightblue;
+    margin-top: base.$footer-margin-top;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: base.$footer-box-shadow;
+}
+

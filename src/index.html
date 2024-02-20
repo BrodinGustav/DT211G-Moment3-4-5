@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/src/css/style.css">
+    <link rel="stylesheet" type="text/css" href="SASS/main.scss">
     <script src="/src/js/main.js" type="module"></script>
     <title>DT211G Moment3</title>
 </head>
 <header>
-    <img class="logga" src="/bilder/logga/logga.svg" a href="index.html">
+    <a href="index.html">
+    <img class="logga" src="/bilder/logga/logga.svg"> 
+    </a>
     <h1>DT211G Moment 3</h1>
     <button class="menu-btn-open" id="open-menu">
             <span class="menu-icon">
@@ -29,34 +31,40 @@
         </button>
         <ul>
             <li><a href="sass">SASS</a></li>
+            <li><a href="#">#</a></li>
+            <li><a href="#">#</a></li>
+            <li><a href="#">#</a></li>
+            <li><a href="#">#</a></li>
         </ul>
     </nav>
 </header>
 <div class="breadcrumbs">
     <p>Du är här:</p><a href="index.html">Startssida/</a>
 </div>
-<body>
+    <body>
+    <div class="container">
     <h2 class="gradient-heading">Humörhörnans Konstgalleri</h2>
+</div>
     <div class="picture-container">
         <picture>
          <source srcset="/bilder/sleep.jpg?as=avif&width=450" type="image/avif">
          <source srcset="/bilder/sleep.jpg?as=webp&width=450" type="image/webp">
-         <img src="/bilder/sleep.jpg" alt="Illustration över sömnbrist">
+         <img src="/bilder/sleep.jpg" alt="Illustration över sömnbrist" title="Sömnbrist">
         </picture>
         <picture>
             <source srcset="/bilder/zombi.jpg?as=avif&width=450" type="image/avif">
             <source srcset="/bilder/zombi.jpg?as=webp&width=450" type="image/webp">
-            <img src="/bilder/zombi.jpg" alt="Illustration över en katastrof">
+            <img src="/bilder/zombi.jpg" alt="Illustration av en zombi" title="Zombi">
            </picture>
            <picture>
             <source srcset="/bilder/kodapa.jpg?as=avif&width=450" type="image/avif">
             <source srcset="/bilder/kodapa.jpg?as=webp&width=450" type="image/webp">
-            <img src="/bilder/kodapa.jpg" alt="Illustration över en programmerare">
+            <img src="/bilder/kodapa.jpg" alt="Illustration över en programmerare" title="Kodapa">
            </picture>
            <picture>
             <source srcset="/bilder/onion.jpg?as=avif&width=450" type="image/avif">
             <source srcset="/bilder/onion.jpg?as=webp&width=450" type="image/webp">
-            <img src="/bilder/onion.jpg" alt="Illustration över en lökig situation">
+            <img src="/bilder/onion.jpg" alt="Illustration över en lökig situation" title="Lökigt">
            </picture>
     </div>
 </body>

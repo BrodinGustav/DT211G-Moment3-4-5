@@ -25,26 +25,27 @@ h1 {
   color: azure;
 }
 
-h2 {
-  text-align: center;
+.container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.gradient-heading {
   background: linear-gradient(90deg, orange, #fff);
   color: #0000;
   -webkit-background-clip: text;
-  font-size: 36px;
+  font-size: 3em;
   font-weight: bold;
   transition: background .5s;
   display: inline-block;
-}
-
-.gradient-heading:hover {
-  background-position: 100% 0;
 }
 
 nav {
   background-color: #0ff;
   border-radius: 25%;
   width: 250px;
-  height: 50vh;
+  height: auto;
   font-size: 1.4em;
   display: none;
   position: absolute;

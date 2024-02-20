@@ -1,0 +1,23 @@
+@use '../abstracts/base';
+
+
+h1{
+    color:azure;
+}
+
+.container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gradient-heading{
+    font-size: 3em;
+        font-weight: bold;
+        background: linear-gradient(90deg, orange, white); 
+        -webkit-background-clip: text; 
+        background-clip: text;
+        color: transparent; 
+        display: inline-block; 
+        transition: background 0.5s ease; 
+    }

@@ -1,0 +1,66 @@
+//Färger
+$primary-lightgrey: lightgreen;
+$secondary-lightblue: lightblue;
+$nav-background-color: aqua;
+$breadcrumbs-color: orange;
+$menu-btn-open-bg: orange;
+$menu-btn-open-border: white;
+$menu-btn-open-hover-bg: orangered;
+$menu-bars-bg: white;
+$menu-text-color: white;
+$menu-btn-close-bg: orange;
+$footer-background-color: lightblue;
+
+//Padding
+$body-padding:100px;
+$header-padding:0.5em;
+$menu-btn-padding:15px 25px;
+$menu-btn-close-padding: 10px 15px;
+
+//Font-size
+$font-size:16px;
+$nav-font-size: 1.4em;
+$breadcrumbs-font-size: 1.2em;
+
+//Font-weight
+$breadcrumbs-font-weight: 500;
+
+//Border
+$side-border:0.5em solid black; 
+$border-radius:40%;
+$nav-border-radius: 25%;
+$menu-btn-close-border-radius: 50%;
+
+//Box-shadow
+$box-shadow:1px 1px 1px 1px black;
+$nav-box-shadow: 0 0px 10px black;
+$breadcrumbs-text-shadow: 1px 0.5px 0.5px black;
+$menu-btn-open-box-shadow: 1px 1px 1px black;
+$menu-btn-open-hover-box-shadow: 0 0px 5px gainsboro;
+$footer-box-shadow: 1px 1px 1px 1px black;
+
+//Position
+$nav-position-top: 0.5em;
+$nav-position-right: 3em;
+$picture-container-margin-top: 5em;
+$picture-container-gap: 2em;
+$footer-margin-top: 10em;
+
+//Width
+$nav-width: 250px;
+
+
+  //Media query för mörkt läge
+    $dark-background: #1a1a1a;
+    $dark-text: #fff;
+    $dark-link: #4caf50;
+    $dark-link-hover: #388e3c;
+  
+  
+  
+  // Media query för ljust läge 
+    $light-background: #dcd9d9;
+    $light-text: #333;
+    $light-link: #007bff;
+    $light-link-hover: #0056b3;      
+

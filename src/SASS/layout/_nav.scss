@@ -1,0 +1,125 @@
+@use '../abstracts/base';
+//@use '/src/SASS/themes/theme';
+
+
+nav{
+    background-color: base.$nav-background-color;
+    box-shadow: base.$nav-box-shadow;
+    font-size: base.$nav-font-size;
+    position:absolute;
+    right:base.$nav-position-right;
+    top:base.$nav-position-top;
+    height:auto;
+    width:base.$nav-width;
+    border-radius: base.$nav-border-radius;
+    display:none;
+
+    ul{
+        width:100%;
+        list-style-type:none;
+        text-align: center;
+        margin:0 auto;
+        padding:0;
+    }
+
+    li{
+        padding: 0.8em 0;
+        width: 100%;
+    }
+
+    a{
+        color:black;
+        text-decoration: none;
+        padding:0 1em;
+    }
+
+    a:hover{
+        color:blue;
+        text-decoration: underline;
+    }
+
+
+}
+
+    .breadcrumbs{
+        display: flex;
+        align-items: center;
+    
+     p{
+        color: base.$breadcrumbs-color;
+        text-shadow: base.$breadcrumbs-text-shadow;
+        font-size: base.$breadcrumbs-font-size;
+        font-weight: base.$breadcrumbs-font-weight;
+    }
+    
+    a{
+        margin-left: 0.2em;
+    }
+
+}
+
+/*----------------------------------*/
+/*Öppna menyknapp*/
+.menu-btn-open{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    padding:base.$menu-btn-padding;
+    background-color: base.$menu-btn-open-bg;
+    border: base.$menu-btn-open-border;
+    cursor: pointer;
+    box-shadow: base.$menu-btn-open-box-shadow;
+}
+
+.open{
+    margin: 0 1em;
+}
+
+.menu-btn:hover{
+    background-color: base.$menu-btn-open-hover-bg;
+    box-shadow: base.$menu-btn-open-hover-box-shadow;
+}
+
+/*bars*/
+.bars{
+    display:block;
+    width: 40px;
+    height: 3px;
+    background: base.$menu-bars-bg;
+    margin: 5px;
+}
+
+.menu-text{
+    font-size: 1.2em;
+    color: base.$menu-text-color;
+}
+
+/*Stäng menyknapp*/
+.close{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top:1em;
+    padding: base.$menu-btn-close-padding;
+    background-color: base.$menu-btn-close-bg;
+    border-radius: base.$menu-btn-close-border-radius;
+}
+
+/*Kryssbars*/
+.cross1{
+    width:25px;
+    transform: rotate(45deg);
+    position:relative;
+    top:5px;
+    left:3px;
+}
+
+.cross2{
+    width:25px;
+    transform: rotate(135deg);
+    position:relative;
+    top: -3px;
+    left:3px;
+}
+
+/*----------------------------*/

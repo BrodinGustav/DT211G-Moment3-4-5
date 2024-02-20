@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "source": "src/index.html",
+  "browserslist": ">0.5%, last 2 versions, not dead",
   "scripts": {
     "start": "parcel",
     "build": "parcel build"
@@ -10,6 +11,7 @@
   "author": "Gustav Brodin",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.11.0",
     "htmlnano": "^2.1.0",
     "parcel": "^2.11.0",
     "sharp": "^0.31.3",

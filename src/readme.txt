@@ -1,1 +1,2 @@
 --2024--02--16  Ordnat med layout för html med css och JS för hamburgarmeny.
+--2024--02--20  Ordnat med dark och light scheme för mediaqueries. Lagt in SASS-filer
