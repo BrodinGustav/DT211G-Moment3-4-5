@@ -1,6 +1,4 @@
-@use '../abstracts/base';
-//@use '/src/SASS/themes/theme';
-
+@use '../abstracts/base'; 
 
 nav{
     background-color: base.$nav-background-color;
@@ -38,7 +36,6 @@ nav{
         text-decoration: underline;
     }
 
-
 }
 
     .breadcrumbs{
@@ -66,9 +63,11 @@ nav{
     align-items:center;
     padding:base.$menu-btn-padding;
     background-color: base.$menu-btn-open-bg;
-    border: base.$menu-btn-open-border;
+    border: 2px solid base.$border-radius;
+    border-color: yellow;
     cursor: pointer;
     box-shadow: base.$menu-btn-open-box-shadow;
+    box-sizing: border-box;
 }
 
 .open{
@@ -123,3 +122,28 @@ nav{
 }
 
 /*----------------------------*/
+
+  //Media query för mörkt läge
+  @media (prefers-color-scheme: dark) {
+
+    nav{
+        background-color: lightgoldenrodyellow;
+    }
+
+    nav a{
+        color: base.$dark-link;    
+     }
+ 
+    nav a:hover{
+     color: base.$dark-link-hover;
+   }
+   
+   .breadcrumbs a
+   {
+    color: base.$dark-link;    
+ }
+
+}
+
+ /*-----------------------------*/
+

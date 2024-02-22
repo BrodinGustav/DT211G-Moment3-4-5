@@ -2,11 +2,12 @@
 
 
 h1{
-    color:azure;
+ @extend .gradient-heading;
 }
 
 .container{
     display:flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -14,10 +15,12 @@ h1{
 .gradient-heading{
     font-size: 3em;
         font-weight: bold;
-        background: linear-gradient(90deg, orange, white); 
+        background: linear-gradient(90deg, #BE2490, gray); 
         -webkit-background-clip: text; 
         background-clip: text;
         color: transparent; 
         display: inline-block; 
         transition: background 0.5s ease; 
     }
+
+

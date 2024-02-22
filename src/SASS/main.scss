@@ -1,8 +1,6 @@
+
 //Variables
 @use './abstracts/base';
-
-//Themes
-@use './themes/theme';
 
 //Layout
 @use './layout/body';
@@ -11,9 +9,10 @@
 @use './layout/headlines';
 @use './layout/nav';
 @use './layout/pictures';
+@use './layout/sass';
 @use './layout/footer';
 
-
+@use './mediaqueries';
 
 
 

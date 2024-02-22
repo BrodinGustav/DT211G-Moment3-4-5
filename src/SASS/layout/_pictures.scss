@@ -2,16 +2,16 @@
 
 
 .picture-container{
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: center;
+    max-width:100%;
+    height:auto;
+
+}
+
+img{
     margin-top:base.$picture-container-margin-top;
     gap:base.$picture-container-gap;
+    width:50vw;
+    display: flex;
+margin:0 auto;
+margin-bottom:3em;
 }
-
-picture{
-    box-shadow: base.$footer-box-shadow;
-    height:100%;
-    background-color: base.$footer-background-color;
-}
-

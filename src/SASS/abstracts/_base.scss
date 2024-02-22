@@ -1,15 +1,26 @@
+
+  //Media query för mörkt läge
+  $dark-background: #1a1a1a;
+  $dark-text: #fff;
+  $dark-link: #4caf50;
+  $dark-link-hover: #388e3c;
+
+// Media query för ljust läge 
+  $light-background: #FFEADB;
+  $light-text: #333;
+  $light-link: #007bff;
+  $light-link-hover: #0056b3;      
+
 //Färger
-$primary-lightgrey: lightgreen;
-$secondary-lightblue: lightblue;
+$header-footer-color: #FF9A76;
 $nav-background-color: aqua;
 $breadcrumbs-color: orange;
-$menu-btn-open-bg: orange;
-$menu-btn-open-border: white;
+$menu-btn-open-bg: transparent;
+$menu-btn-open-border: yellow;
 $menu-btn-open-hover-bg: orangered;
 $menu-bars-bg: white;
 $menu-text-color: white;
 $menu-btn-close-bg: orange;
-$footer-background-color: lightblue;
 
 //Padding
 $body-padding:100px;
@@ -18,7 +29,7 @@ $menu-btn-padding:15px 25px;
 $menu-btn-close-padding: 10px 15px;
 
 //Font-size
-$font-size:16px;
+$font-size:18px;
 $nav-font-size: 1.4em;
 $breadcrumbs-font-size: 1.2em;
 
@@ -37,7 +48,6 @@ $nav-box-shadow: 0 0px 10px black;
 $breadcrumbs-text-shadow: 1px 0.5px 0.5px black;
 $menu-btn-open-box-shadow: 1px 1px 1px black;
 $menu-btn-open-hover-box-shadow: 0 0px 5px gainsboro;
-$footer-box-shadow: 1px 1px 1px 1px black;
 
 //Position
 $nav-position-top: 0.5em;
@@ -49,18 +59,6 @@ $footer-margin-top: 10em;
 //Width
 $nav-width: 250px;
 
-
-  //Media query för mörkt läge
-    $dark-background: #1a1a1a;
-    $dark-text: #fff;
-    $dark-link: #4caf50;
-    $dark-link-hover: #388e3c;
-  
-  
-  
-  // Media query för ljust läge 
-    $light-background: #dcd9d9;
-    $light-text: #333;
-    $light-link: #007bff;
-    $light-link-hover: #0056b3;      
-
+@mixin box-shadow($value) {
+  box-shadow: $box-shadow;
+}

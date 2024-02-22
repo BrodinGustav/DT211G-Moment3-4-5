@@ -1,7 +1,8 @@
 body {
-  background-color: #dcd9d9;
-  padding: 0 100px;
-  font-size: 16px;
+  background-color: #ffeadb;
+  max-width: 100%;
+  font-family: Cormorant Garamond, serif;
+  font-size: 18px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,39 +15,42 @@ body {
 @media (prefers-color-scheme: light) {
   body {
     color: #333;
-    background-color: #dcd9d9;
+    background-color: #ffeadb;
   }
 }
 
+body {
+  font-size: 16px;
+}
+
 header {
-  background-color: #add8e6;
+  background-color: #ff9a76;
   border-left: .5em solid #000;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: .5em;
   display: flex;
 }
 
 .logga {
-  border: 2px solid orange;
+  box-sizing: border-box;
+  border: 2px solid #ff0;
   border-radius: 40%;
   width: 3em;
   height: auto;
-  padding: .5em;
-}
-
-h1 {
-  color: azure;
+  margin-top: 2em;
+  padding: 1em;
 }
 
 .container {
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   display: flex;
 }
 
-.gradient-heading {
-  background: linear-gradient(90deg, orange, #fff);
+.gradient-heading, h1 {
+  background: linear-gradient(90deg, #be2490, gray);
   color: #0000;
   -webkit-background-clip: text;
   background-clip: text;
@@ -110,9 +114,11 @@ nav a:hover {
 }
 
 .menu-btn-open {
+  border: 2px solid 40%;
   cursor: pointer;
-  background-color: orange;
-  border: #fff;
+  box-sizing: border-box;
+  background-color: #0000;
+  border-color: #ff0;
   flex-direction: column;
   align-items: center;
   padding: 15px 25px;
@@ -167,27 +173,713 @@ nav a:hover {
   transform: rotate(135deg);
 }
 
+@media (prefers-color-scheme: dark) {
+  nav {
+    background-color: #fafad2;
+  }
+
+  nav a {
+    color: #4caf50;
+  }
+
+  nav a:hover {
+    color: #388e3c;
+  }
+
+  .breadcrumbs a {
+    color: #4caf50;
+  }
+}
+
 .picture-container {
-  flex-wrap: wrap;
-  justify-content: center;
+  max-width: 100%;
+  height: auto;
+}
+
+img {
   gap: 2em;
-  margin-top: 5em;
+  width: 50vw;
+  margin: 0 auto 3em;
   display: flex;
 }
 
-picture {
-  background-color: #add8e6;
-  height: 100%;
-  box-shadow: 1px 1px 1px 1px #000;
+.sass-evaluation {
+  text-align: left;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.sass-evaluation p {
+  width: 50%;
+  line-height: 1.4em;
+}
+
+.sass-evaluation ul {
+  margin-right: 15em;
 }
 
 footer {
-  background-color: #add8e6;
+  background-color: #ff9a76;
   justify-content: space-evenly;
   align-items: center;
+  max-width: 100%;
   margin-top: 10em;
   display: flex;
   box-shadow: 1px 1px 1px 1px #000;
+}
+
+@media screen and (width <= 320px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    border: none;
+    justify-content: center;
+    gap: 0;
+    width: 100vw;
+    max-width: 100%;
+    padding: 0;
+    display: flex;
+  }
+
+  header .logga {
+    width: 3em;
+    margin-left: 1em;
+    margin-right: 2em;
+    padding: .2em;
+  }
+
+  header h1 {
+    flex-wrap: wrap;
+    width: 50%;
+    font-size: 1.5em;
+    display: flex;
+  }
+
+  header .menu-btn-open {
+    margin-right: 2em;
+    padding: 1em;
+  }
+
+  header .menu-btn-open .bars {
+    width: 2em;
+  }
+
+  header .menu-btn-open .menu-text {
+    font-size: 1em;
+  }
+
+  nav {
+    right: 40px;
+  }
+
+  .container .gradient-heading {
+    text-align: center;
+    font-size: 2em;
+  }
+
+  .container p {
+    width: 70%;
+    margin-bottom: 2em;
+  }
+
+  .sass-evaluation p {
+    width: 80%;
+  }
+
+  .sass-evaluation ul {
+    margin: 0;
+  }
+}
+
+@media screen and (width >= 320px) and (width <= 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    border: none;
+    justify-content: center;
+    gap: 0;
+    width: 100vw;
+    max-width: 100%;
+    padding: 0;
+    display: flex;
+  }
+
+  header .logga {
+    width: 4em;
+    margin-left: 1em;
+    margin-right: 2em;
+    padding: .5em;
+  }
+
+  header h1 {
+    flex-wrap: wrap;
+    width: 50%;
+    font-size: 2em;
+    display: flex;
+  }
+
+  header .menu-btn-open {
+    margin-right: 1em;
+    padding: .5em;
+  }
+
+  header .menu-btn-open .bars {
+    width: 3em;
+    height: .2em;
+    margin-top: .3em;
+  }
+
+  header .menu-btn-open .menu-text {
+    font-size: 1.5em;
+  }
+
+  nav {
+    width: 7em;
+    font-size: 1.5em;
+    right: 40px;
+  }
+
+  .close {
+    padding: 1em;
+    font-size: .6em;
+  }
+
+  .close .cross1 {
+    width: 40px;
+    top: 0;
+    left: 0;
+  }
+
+  .close .cross2 {
+    width: 40px;
+    top: -10px;
+    left: 0;
+  }
+
+  .container .gradient-heading {
+    text-align: center;
+    width: 95%;
+    font-size: 2em;
+  }
+
+  .container p {
+    text-align: center;
+    width: 70%;
+    margin-bottom: 2em;
+    font-size: 1.5em;
+  }
+
+  img {
+    width: 80vw;
+  }
+
+  .sass-evaluation h2 {
+    font-size: 1.5em;
+  }
+
+  .sass-evaluation p {
+    width: 80%;
+  }
+
+  .sass-evaluation ul {
+    margin: 0;
+  }
+}
+
+@media screen and (width >= 768px) and (width <= 1080px) {
+  header {
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  header .logga {
+    width: 5em;
+    margin-left: 4em;
+    margin-right: 2em;
+    padding: .5em;
+  }
+
+  header h1 {
+    width: 100%;
+    font-size: 3em;
+  }
+
+  header .menu-btn-open {
+    margin-right: 4em;
+    padding: 1em;
+  }
+
+  header .menu-btn-open .bars {
+    width: 5em;
+    height: .3em;
+    margin-top: .5em;
+  }
+
+  header .menu-btn-open .menu-text {
+    font-size: 2em;
+  }
+
+  nav {
+    width: 6em;
+    font-size: 1.7em;
+    right: 40px;
+  }
+
+  .close {
+    padding: 1em;
+    font-size: .6em;
+  }
+
+  .close .cross1 {
+    width: 35px;
+    top: 1px;
+    left: 5px;
+  }
+
+  .close .cross2 {
+    width: 35px;
+    top: -8px;
+    left: 5px;
+  }
+
+  .breadcrumbs {
+    font-size: 1.5em;
+  }
+
+  .container .gradient-heading {
+    text-align: center;
+    font-size: 3em;
+  }
+
+  .container p {
+    text-align: center;
+    width: 70%;
+    margin-bottom: 2em;
+    font-size: 1.3em;
+  }
+
+  .picture-container img {
+    width: 50vw;
+  }
+
+  footer {
+    font-size: 1.5em;
+  }
+
+  .sass-evaluation h2 {
+    font-size: 2em;
+  }
+
+  .sass-evaluation p {
+    width: 80%;
+    font-size: 1.3em;
+  }
+
+  .sass-evaluation ul {
+    margin: 0;
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (width >= 1081px) and (width <= 1440px) {
+  body {
+    padding: 0 100px;
+  }
+
+  header {
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  header .logga {
+    width: 5em;
+    margin-left: 4em;
+    margin-right: 2em;
+    padding: .5em;
+  }
+
+  header h1 {
+    width: 100%;
+    font-size: 3em;
+  }
+
+  header .menu-btn-open {
+    margin-right: 4em;
+    padding: 1em;
+  }
+
+  header .menu-btn-open .bars {
+    width: 5em;
+    height: .2em;
+    margin-top: .5em;
+  }
+
+  header .menu-btn-open .menu-text {
+    font-size: 2em;
+  }
+
+  nav {
+    width: 8em;
+    font-size: 1.8em;
+    right: 40px;
+  }
+
+  .close {
+    padding: 1em;
+    font-size: .6em;
+  }
+
+  .close .cross1 {
+    width: 35px;
+    top: 0;
+    left: 5px;
+  }
+
+  .close .cross2 {
+    width: 35px;
+    top: -9px;
+    left: 5px;
+  }
+
+  .breadcrumbs {
+    font-size: 1.5em;
+  }
+
+  .container .gradient-heading {
+    text-align: center;
+    font-size: 3em;
+  }
+
+  .container p {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2em;
+    font-size: 1.5em;
+  }
+
+  footer {
+    font-size: 1.3em;
+  }
+
+  .sass-evaluation h2 {
+    font-size: 2em;
+  }
+
+  .sass-evaluation p {
+    width: 80%;
+    font-size: 1.3em;
+  }
+
+  .sass-evaluation ul {
+    margin: 0;
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (width >= 1441px) and (width <= 1850px) {
+  body {
+    padding: 0 100px;
+  }
+
+  header {
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  header .logga {
+    width: 8em;
+    margin-left: 5em;
+    margin-right: 2em;
+    padding: 1em;
+  }
+
+  header h1 {
+    width: 100%;
+    font-size: 4em;
+  }
+
+  header .menu-btn-open {
+    margin-right: 5em;
+    padding: 2em;
+  }
+
+  header .menu-btn-open .bars {
+    width: 5em;
+    height: .5em;
+    margin-top: .5em;
+  }
+
+  header .menu-btn-open .menu-text {
+    font-size: 3.5em;
+  }
+
+  nav {
+    width: 8em;
+    font-size: 3em;
+    right: 40px;
+  }
+
+  .close {
+    padding: 1em;
+    font-size: .6em;
+  }
+
+  .close .cross1 {
+    width: 55px;
+    top: 0;
+    left: 10px;
+  }
+
+  .close .cross2 {
+    width: 55px;
+    top: -10px;
+    left: 12px;
+  }
+
+  .breadcrumbs {
+    font-size: 2.5em;
+  }
+
+  .container .gradient-heading {
+    text-align: center;
+    font-size: 5em;
+  }
+
+  .container p {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2em;
+    font-size: 2.5em;
+  }
+
+  footer {
+    font-size: 2.5em;
+  }
+
+  .sass-evaluation h2 {
+    font-size: 4em;
+  }
+
+  .sass-evaluation p {
+    width: 70%;
+    font-size: 3em;
+  }
+
+  .sass-evaluation ul {
+    margin: 0;
+    font-size: 3em;
+  }
+}
+
+@media screen and (width >= 1851px) and (width <= 2100px) {
+  body {
+    padding: 0 100px;
+  }
+
+  header {
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  header .logga {
+    width: 10em;
+    margin-left: 5em;
+    margin-right: 2em;
+    padding: 1em;
+  }
+
+  header h1 {
+    width: 100%;
+    font-size: 4em;
+  }
+
+  header .menu-btn-open {
+    margin-right: 5em;
+    padding: 1.5em;
+    font-size: 1.5em;
+  }
+
+  header .menu-btn-open .bars {
+    width: 3em;
+    height: .3em;
+    margin-top: .5em;
+  }
+
+  header .menu-btn-open .menu-text {
+    font-size: 1.5em;
+  }
+
+  nav {
+    width: 7em;
+    height: auto;
+    font-size: 4em;
+    right: 40px;
+  }
+
+  .close {
+    padding: 1em;
+    font-size: .6em;
+  }
+
+  .close .cross1 {
+    width: 55px;
+    top: 0;
+    left: 30px;
+  }
+
+  .close .cross2 {
+    width: 55px;
+    top: -10px;
+    left: 30px;
+  }
+
+  .breadcrumbs {
+    font-size: 2.5em;
+  }
+
+  .container .gradient-heading {
+    text-align: center;
+    font-size: 6em;
+  }
+
+  .container p {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2em;
+    font-size: 2.5em;
+  }
+
+  footer {
+    font-size: 2.5em;
+  }
+
+  .sass-evaluation h2 {
+    font-size: 4em;
+  }
+
+  .sass-evaluation p {
+    width: 60%;
+    font-size: 3em;
+  }
+
+  .sass-evaluation ul {
+    margin: 0;
+    font-size: 3em;
+  }
+}
+
+@media screen and (width >= 2100px) {
+  body {
+    padding: 0 100px;
+  }
+
+  header {
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  header .logga {
+    width: 10em;
+    margin-left: 5em;
+    margin-right: 2em;
+    padding: 1em;
+  }
+
+  header h1 {
+    width: 100%;
+    font-size: 4em;
+  }
+
+  header .menu-btn-open {
+    margin-right: 5em;
+    padding: 2em;
+  }
+
+  header .menu-btn-open .bars {
+    width: 7em;
+    height: .5em;
+    margin-top: 1em;
+  }
+
+  header .menu-btn-open .menu-text {
+    font-size: 3em;
+  }
+
+  header .close {
+    padding: 1em;
+    font-size: .6em;
+  }
+
+  header .close .cross1 {
+    width: 55px;
+    top: 1px;
+    left: 15px;
+  }
+
+  header .close .cross2 {
+    width: 55px;
+    top: -7px;
+    left: 15px;
+  }
+
+  nav {
+    width: 10em;
+    height: auto;
+    font-size: 3em;
+    right: 40px;
+  }
+
+  .breadcrumbs {
+    font-size: 2.5em;
+  }
+
+  .container .gradient-heading {
+    text-align: center;
+    font-size: 6em;
+  }
+
+  .container p {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2em;
+    font-size: 3em;
+  }
+
+  footer {
+    font-size: 2.5em;
+  }
+
+  .sass-evaluation h2 {
+    font-size: 4em;
+  }
+
+  .sass-evaluation p {
+    width: 60%;
+    font-size: 3em;
+  }
+
+  .sass-evaluation ul {
+    margin: 0;
+    font-size: 3em;
+  }
 }
 
 /*# sourceMappingURL=index.6c4a3439.css.map */

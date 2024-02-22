@@ -1,12 +1,10 @@
 @use '../abstracts/base';
-@use '../themes/theme';
 
 body{
 background-color: base.$light-background;
-padding:base.$body-padding;
-padding-top:0;
-padding-bottom:0;
 font-size:base.$font-size;
+font-family: "Cormorant Garamond", serif;
+max-width:100%;
 }
 
   //Media query för mörkt läge
@@ -15,8 +13,8 @@ font-size:base.$font-size;
         background-color: base.$dark-background;
         color: base.$dark-text;
     }
+    
   }
-  
   
   // Media query för ljust läge 
   @media (prefers-color-scheme: light) {
@@ -24,5 +22,16 @@ font-size:base.$font-size;
     background-color: base.$light-background;
     color: base.$light-text;
     }        
+}
+
+//If-else sats för justering av font-size
+$is-mobile: false;
+
+body {
+  @if $is-mobile {
+      font-size: 14px;
+  } @else {
+      font-size: 16px;
+  }
 }
 

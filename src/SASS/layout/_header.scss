@@ -1,14 +1,12 @@
 @use '../abstracts/base';
-@use '../themes/theme';
-
 
 header{
-    background-color: base.$secondary-lightblue;
-    display:flex;
-    justify-content: space-between;
+    background-color: base.$header-footer-color;
+    display:flex;   
+    justify-content: center;
     align-items: center;
     padding:base.$header-padding;
     border-left:base.$side-border;
-
-  
 }
+
+

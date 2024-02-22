@@ -1,0 +1,733 @@
+@use '../SASS/layout/body';
+@use '../SASS/layout/header';
+@use '../SASS/layout/headlines';
+@use '../SASS/layout/logga';
+@use '../SASS/layout/nav';
+@use '../SASS/layout/pictures';
+@use '../SASS/layout/sass';
+
+
+@media screen and (max-width: 320px){
+body{
+    margin:0;
+    padding:0;
+}
+
+    header{
+        max-width:100%;
+        width:100vw;
+        justify-content: center;
+        display: flex;
+        gap:0;
+        padding:0;
+        border:none;
+
+        .logga{
+            width:3em;
+            padding:0.2em;
+            margin-right:2em;
+            margin-left:1em;
+        }
+    
+    h1{
+        font-size:1.5em;
+        display: flex;
+        flex-wrap:wrap;
+        width:50%;
+    }
+
+    .menu-btn-open{
+        padding:1em;
+            margin-right:2em;
+
+        .bars{
+            width:2em;
+    }
+
+    .menu-text{
+        font-size:1em;
+    }
+}
+}
+    nav{
+        right:40px;     
+}
+
+.container{
+.gradient-heading{
+    text-align: center;
+        font-size:2em;
+    }
+
+    p{
+width:70%;
+margin-bottom:2em;
+    }
+ }
+ 
+ .sass-evaluation{
+ 
+p{
+    width:80%;
+}
+
+ul{
+margin:0;
+}
+}
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+    body{
+        margin:0;
+        padding:0;
+    }
+    
+        header{
+            max-width:100%;
+            width:100vw;
+            justify-content: center;
+            display: flex;
+            gap:0;
+            padding:0;
+            border:none;
+    
+            .logga{
+                width:4em;
+                padding:0.5em;
+                margin-right:2em;
+                margin-left:1em;
+            }
+        
+    
+        h1{
+            font-size:2em;
+            display: flex;
+            flex-wrap:wrap;
+            width:50%;
+        }
+    
+        .menu-btn-open{
+            padding:0.5em;
+                margin-right:1em;
+    
+            .bars{
+                width:3em;
+                height:0.2em;
+                margin-top:0.3em;
+        }
+    
+        .menu-text{
+            font-size:1.5em;
+        }
+    }
+}
+nav{
+    right:40px;
+    width:7em;
+    font-size:1.5em;
+}
+
+.close{
+font-size: 0.6em;
+padding: 1em;
+
+.cross1{
+    width:40px;
+    top:0;
+    left:0;
+}
+
+.cross2{
+    width:40px;
+    top: -10px;
+    left:0;
+}
+}
+
+    .container{
+    .gradient-heading{
+        text-align: center;
+            font-size:2em;
+            width:95%;
+        }
+    
+        p{
+    width:70%;
+    margin-bottom:2em;
+    text-align: center;
+    font-size:1.5em;
+        }
+     }
+
+     img{
+        width:80vw;
+     }
+
+     .sass-evaluation{
+        h2{
+            font-size:1.5em;
+        }
+
+        p{
+            width:80%;
+        }
+        
+        ul{
+        margin:0;
+        }
+        }   
+        
+}
+
+/*------------------------------------------------------*/
+    
+    @media screen and (min-width: 768px) and (max-width: 1080px){
+        header{
+            max-width:100%;
+            width:100vw;
+            padding:0;
+            margin:0;
+            
+                .logga{
+                    width:5em;
+                    padding:0.5em;
+                    margin-right:2em;
+                    margin-left:4em;
+                }
+            
+        
+            h1{
+                font-size:3em;
+                width:100%;
+            }
+        
+            .menu-btn-open{
+                padding:1em;
+                    margin-right:4em;
+        
+                .bars{
+                    width:5em;
+                    height:0.3em;
+                    margin-top:0.5em;
+            }
+        
+            .menu-text{
+                font-size:2em;
+            }
+        
+        }
+        
+    }
+    nav{
+        right:40px;
+        width:6em;
+        font-size:1.7em;
+}
+
+.close{
+    font-size: 0.6em;
+    padding: 1em;
+
+    .cross1{
+        width:35px;
+        top:1;
+        left:5;
+    }
+    
+    .cross2{
+        width:35px;
+        top: -8px;
+        left:5;
+    }
+}
+        
+    .breadcrumbs{
+        font-size:1.5em;
+    }
+
+        .container{
+        .gradient-heading{
+            text-align: center;
+                font-size:3em;
+            }
+        
+            p{
+        width:70%;
+        margin-bottom:2em;
+        text-align: center;
+        font-size:1.3em;
+            }
+         }
+
+         .picture-container{
+
+         img{
+            width:50vw;
+         }
+
+        }
+
+        footer{
+            font-size:1.5em;
+        }
+         
+         .sass-evaluation{
+            h2{
+                font-size:2em;
+            }
+            p{
+                width:80%;
+                font-size:1.3em;
+            }
+            
+            ul{
+            margin:0;
+            font-size:1.3em;
+            }
+            }
+        
+        }
+        
+        /*-------------------------------------------------------------*/
+
+        @media screen and (min-width: 1081px) and (max-width: 1440px){
+            body{
+                padding:100px;
+                padding-top:0;
+                padding-bottom:0;
+            }
+
+            header{
+                max-width:100%;
+                width:100vw;
+                padding:0;
+                margin:0;
+                
+                    .logga{
+                        width:5em;
+                        padding:0.5em;
+                        margin-right:2em;
+                        margin-left:4em;
+                    }
+                
+            
+                h1{
+                    font-size:3em;
+                    width:100%;
+                }
+            
+                .menu-btn-open{
+                    padding:1em;
+                        margin-right:4em;
+            
+                    .bars{
+                        width:5em;
+                        height:0.2em;
+                        margin-top:0.5em;
+                }
+            
+                .menu-text{
+                    font-size:2em;
+                }
+            
+            }
+            
+        }
+                nav{
+                    right:40px;
+                    width:8em;
+                    font-size:1.8em;
+            }
+
+            .close{
+                font-size: 0.6em;
+                padding: 1em;
+           
+                .cross1{
+                    width:35px;
+                    top:0;
+                    left:5px;
+                }
+                
+                .cross2{
+                    width:35px;
+                    top: -9px;
+                    left:5px;
+                }
+           
+            }
+
+            .breadcrumbs{
+                font-size:1.5em;
+            }
+            
+            .container{
+            .gradient-heading{
+                text-align: center;
+                    font-size:3em;
+                }
+            
+                p{
+            width:100%;
+            margin-bottom:2em;
+            text-align: center;
+            font-size:1.5em;
+                }
+             }
+            
+             footer{
+                font-size:1.3em;
+             }
+            
+             .sass-evaluation{
+                h2{
+                    font-size:2em;
+                }
+                p{
+                    width:80%;
+                    font-size:1.3em;
+                }
+                
+                ul{
+                margin:0;
+                font-size:1.3em;
+                }
+                }
+             }
+            
+            /*------------------------------------------------------------*/
+
+            @media screen and (min-width: 1441px) and (max-width: 1850px){
+                body{
+                    padding:100px;
+                    padding-top:0;
+                    padding-bottom:0;
+                }
+                
+                header{
+                    max-width:100%;
+                    width:100vw;
+                    padding:0;
+                    margin:0;;
+                    
+                        .logga{
+                            width:8em;
+                            padding:1em;
+                            margin-right:2em;
+                            margin-left:5em;
+                        }
+                    
+                
+                    h1{
+                        font-size:4em;
+                        width:100%;
+                    }
+                
+                    .menu-btn-open{
+                        padding:2em;
+                            margin-right:5em;
+                
+                        .bars{
+                            width:5em;
+                            height:0.5em;
+                            margin-top:0.5em;
+                    }
+                
+                    .menu-text{
+                        font-size:3.5em;
+                    }
+                
+                }
+                
+            }
+                    nav{
+                        right:40px;
+                        font-size:3em;
+                        width:8em;
+                }
+    
+                .close{
+                    font-size: 0.6em;
+                    padding: 1em;
+               
+                    .cross1{
+                        width:55px;
+                        top:0;
+                        left:10px;
+                    }
+                    
+                    .cross2{
+                        width:55px;
+                        top: -10px;
+                        left:12px;
+                    }
+               
+                }
+
+                .breadcrumbs{
+                    font-size:2.5em;
+                }
+                
+                .container{
+                .gradient-heading{
+                    text-align: center;
+                        font-size:5em;
+                    }
+                
+                    p{
+                width:100%;
+                margin-bottom:2em;
+                text-align: center;
+                font-size:2.5em;
+                    }
+                 }
+                
+                 footer{
+                    font-size:2.5em;
+                 }
+                
+                 .sass-evaluation{
+                    h2{
+                        font-size:4em;
+                    }
+                    p{
+                        width:70%;
+                        font-size:3em;
+                    }
+                    
+                    ul{
+                    margin:0;
+                    font-size:3em;
+                    }
+                    }
+                
+
+                }
+                
+            /*----------------------------------------------*/
+                
+            @media screen and (min-width: 1851px) and (max-width: 2100px){
+                body{
+                    padding:100px;
+                    padding-top:0;
+                    padding-bottom:0;
+                }
+                
+                header{
+                    max-width:100%;
+                    width:100vw;
+                    padding:0;
+                    margin:0;;
+                    
+                        .logga{
+                            width:10em;
+                            padding:1em;
+                            margin-right:2em;
+                            margin-left:5em;
+                        }
+                    
+                
+                    h1{
+                        font-size:4em;
+                        width:100%;
+                    }
+                
+                    .menu-btn-open{
+                        padding:1.5em;
+                            margin-right:5em;
+                            font-size:1.5em;
+                
+                        .bars{
+                            width:3em;
+                            height:0.3em;
+                            margin-top:0.5em;
+                    }
+                
+                    .menu-text{
+                        font-size:1.5em;
+                    }
+                
+                }
+                
+            }
+                    nav{
+                        right:40px;
+                        font-size: 4em;
+                        height:auto;
+                        width:7em;
+                    }
+    
+                .close{
+                    font-size: 0.6em;
+                    padding: 1em;
+               
+                    .cross1{
+                        width:55px;
+                        top:0;
+                        left:30px;
+                    }
+                    
+                    .cross2{
+                        width:55px;
+                        top: -10px;
+                        left:30px;
+                    }
+               
+                }
+
+                .breadcrumbs{
+                    font-size:2.5em;
+                }
+                
+                .container{
+                .gradient-heading{
+                    text-align: center;
+                        font-size:6em;
+                    }
+                
+                    p{
+                width:100%;
+                margin-bottom:2em;
+                text-align: center;
+                font-size:2.5em;
+                    }
+                 }
+                
+                 footer{
+                    font-size:2.5em;
+                 }
+
+                 .sass-evaluation{
+                    h2{
+                        font-size:4em;
+                    }
+                    p{
+                        width:60%;
+                        font-size:3em;
+                    }
+                    
+                    ul{
+                    margin:0;
+                    font-size:3em;
+                    }
+                    }
+                
+
+                }
+                
+            /*---------------------------------------*/
+
+            @media screen and (min-width: 2100px){
+                body{
+                    padding:100px;
+                    padding-top:0;
+                    padding-bottom:0;
+                }
+                
+                header{
+                    max-width:100%;
+                    width:100vw;
+                    padding:0;
+                    margin:0;;
+                    
+                        .logga{
+                            width:10em;
+                            padding:1em;
+                            margin-right:2em;
+                            margin-left:5em;
+                        }
+                    
+                
+                    h1{
+                        font-size:4em;
+                        width:100%;
+                    }
+                
+                    .menu-btn-open{
+                        padding:2em;
+                            margin-right:5em;
+                           
+                
+                        .bars{
+                            width:7em;
+                            height:0.5em;
+                            margin-top: 1em;
+                    }
+                
+                    .menu-text{
+                        font-size:3em;
+                    }
+                
+                }
+
+                .close{
+                    font-size: 0.6em;
+                    padding: 1em;
+               
+                    .cross1{
+                        width:55px;
+                        top:1px;
+                        left:15px;
+                    }
+                    
+                    .cross2{
+                        width:55px;
+                        top: -7px;
+                        left:15px;
+                    }
+               
+                }
+                
+                
+            }
+                    nav{
+                        right:40px;
+                        font-size: 3em;
+                        height:auto;
+                        width:10em;
+                    
+                }
+    
+                .breadcrumbs{
+                    font-size:2.5em;
+                }
+                
+                .container{
+                .gradient-heading{
+                    text-align: center;
+                        font-size:6em;
+                    }
+                
+                    p{
+                width:100%;
+                margin-bottom:2em;
+                text-align: center;
+                font-size:3em;
+                    }
+                 }
+                
+                 footer{
+                    font-size:2.5em;
+                 }
+                
+                 .sass-evaluation{
+                    h2{
+                        font-size:4em;
+                    }
+                    p{
+                        width:60%;
+                        font-size:3em;
+                    }
+                    
+                    ul{
+                    margin:0;
+                    font-size:3em;
+                    }
+                    }
+                    
+                }
+
+                
+                

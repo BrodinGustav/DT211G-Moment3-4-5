@@ -11,7 +11,9 @@
   "author": "Gustav Brodin",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/packager-raw-url": "^2.11.0",
     "@parcel/transformer-sass": "^2.11.0",
+    "@parcel/transformer-webmanifest": "^2.11.0",
     "htmlnano": "^2.1.0",
     "parcel": "^2.11.0",
     "sharp": "^0.31.3",
