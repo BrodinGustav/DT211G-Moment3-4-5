@@ -1,0 +1,81 @@
+//Studsande animation för bild
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .animation-img img {
+    transition: transform 0.3s ease-in-out; 
+  }
+
+  .animation-img:hover img {
+    animation: bounce 1s infinite;
+  }
+
+//Blinkande animation för bild
+  @keyframes blink-img {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.blinking-img{
+    animation: blink-img 5s infinite;
+}
+
+//Skugg animation för text
+@keyframes text-shadow {
+    0% {
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+      }
+      50% {
+        text-shadow: 0 0 20px rgba(0, 0, 0, 0.8); 
+      }
+      100% {
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+      }
+    }
+
+  .text-animation {
+        animation: text-shadow 2s infinite;
+      }
+      
+ //Textanimation
+      @keyframes slideintext{
+        from{
+            transform: translateX(-300px);
+
+        }
+
+        to{
+            transform: translateX(0);
+        }
+      }
+
+
+      .h2-animation{
+        animation: slideintext;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+        animation-delay: 0;
+        font-size:2em;
+      }
+
+//Animation för navigering
+      .menu-btn-open{
+        transition: transform 0.3s;
+      }
+
+      .menu-btn-open:hover{ 
+        transform: translateY(-10px);
+      }
