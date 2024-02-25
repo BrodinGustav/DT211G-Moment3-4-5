@@ -16,10 +16,11 @@
     "@parcel/transformer-webmanifest": "^2.11.0",
     "htmlnano": "^2.1.0",
     "parcel": "^2.11.0",
-    "sharp": "^0.31.3",
+    "sharp": "^0.33.2",
     "uglifyjs": "^2.4.11"
   },
   "dependencies": {
+    "chart.js": "^4.4.1",
     "uglifycss": "^0.0.29"
   }
 }
