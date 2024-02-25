@@ -52,7 +52,6 @@ header {
 .gradient-heading, h1 {
   background: linear-gradient(90deg, #be2490, gray);
   color: #0000;
-  -webkit-background-clip: text;
   background-clip: text;
   font-size: 3em;
   font-weight: bold;
@@ -306,6 +305,11 @@ footer {
 
 .menu-btn-open:hover {
   transform: translateY(-10px);
+}
+
+#myChart {
+  width: 400px;
+  height: 400px;
 }
 
 @media screen and (width <= 320px) {

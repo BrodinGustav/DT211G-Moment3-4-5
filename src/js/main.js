@@ -17,6 +17,24 @@ if(style.display === "none") {
 else {
     navMenuEl.style.display = "none";
 }
-
-
 }
+
+/*---------------------------------*/
+
+//diagram
+document.addEventListener('DOMContentLoaded', function(){
+
+const ctx = document.getElementById('myChart');
+
+new Chart(ctx, {
+    type:'bar',
+    data:{
+        labels:['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets:[{
+            label:'# of votes',
+            data:[12, 19, 3, 5, 2, 3],
+            borderWidth: 1
+        }]
+    },
+});
+});
