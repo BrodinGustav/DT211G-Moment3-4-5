@@ -230,6 +230,84 @@ footer {
   box-shadow: 1px 1px 1px 1px #000;
 }
 
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-20px);
+  }
+
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+.animation-img img {
+  transition: transform .3s ease-in-out;
+}
+
+.animation-img:hover img {
+  animation: 1s infinite bounce;
+}
+
+@keyframes blink-img {
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.blinking-img {
+  animation: 5s infinite blink-img;
+}
+
+@keyframes text-shadow {
+  0% {
+    text-shadow: 0 0 10px #00000080;
+  }
+
+  50% {
+    text-shadow: 0 0 20px #000c;
+  }
+
+  100% {
+    text-shadow: 0 0 10px #00000080;
+  }
+}
+
+.text-animation {
+  animation: 2s infinite text-shadow;
+}
+
+@keyframes slideintext {
+  from {
+    transform: translateX(-300px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.h2-animation {
+  animation: 1s ease-in slideintext;
+  animation-delay: 0;
+  font-size: 2em;
+}
+
+.menu-btn-open {
+  transition: transform .3s;
+}
+
+.menu-btn-open:hover {
+  transform: translateY(-10px);
+}
+
 @media screen and (width <= 320px) {
   body {
     margin: 0;
