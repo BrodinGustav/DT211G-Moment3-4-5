@@ -20,6 +20,7 @@
     "uglifyjs": "^2.4.11"
   },
   "dependencies": {
+    "leaflet-geosearch": "^3.11.1",
     "uglifycss": "^0.0.29"
   }
 }

@@ -142,5 +142,16 @@ function createCircleChart(top5Programs) {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
+import L from 'leaflet';
+import { GeoSearchControl, OpenStreetMapProvider } from 'leaflet-geosearch';
+
+const provider = new OpenStreetMapProvider();
+
+const searchControl = new GeoSearchControl({
+  provider: provider,
+});
+
+map.addControl(searchControl);
+
 //Marker
 const marker = L.marker([63.1766832, 14.636068099999989]).addTo(map);
