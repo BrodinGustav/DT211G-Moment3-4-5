@@ -6,3 +6,4 @@
 --2024--02--26 Lag till funktion för både stapel och cirkeldiagram. Löst error då utskrift av diagram krockade. Window.destroy löste problemet.
 --2024--02--26 Lagt till karta från leaflet tillsammans med searchbar. Lagt in leaflet Geocoder för funktion för searchbar
 --2024--02--26 lagt till searchbar via api från leaftlet, geosearchcontrol
+--2024--02--26 Justerat css för searchbar till karta

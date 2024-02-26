@@ -580,10 +580,12 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"1SICI":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+//Import av sökfunktion från leaflet API (https://github.com/smeijer/leaflet-geosearch)
 var _leaflet = require("leaflet");
 var _leafletDefault = parcelHelpers.interopDefault(_leaflet);
 var _leafletGeosearch = require("leaflet-geosearch");
 "use strict";
+//Navigeringsmeny
 let openBtn = document.getElementById("open-menu");
 let closeBtn = document.getElementById("close-menu");
 openBtn.addEventListener("click", toggleMenu);
@@ -594,7 +596,8 @@ function toggleMenu() {
     if (style.display === "none") navMenuEl.style.display = "block";
     else navMenuEl.style.display = "none";
 }
-/*---------------------------------*/ //Hämta in data från Antagningsstatistik HT2023
+/*---------------------------------*/ //Funktioner för stapel och cirkeldiagram
+//Hämta in data från Antagningsstatistik HT2023
 async function fetchData() {
     try {
         const response = await fetch("https://studenter.miun.se/~mallar/dt211g/");
@@ -657,12 +660,12 @@ function createBarChart(top6Courses) {
         }
     });
 }
-/*-----------------------------------------------------------------*/ //cirkeldiagram
+//cirkeldiagram
 function createCircleChart(top5Programs) {
     const labels = top5Programs.map((program)=>program.name);
-    const data = top5Programs.map((program)=>parseInt(program.applicantsTotal));
+    const data = top5Programs.map((program)=>parseInt(program.applicantsTotal)); //konverterar strängvärden från applicantsTotal till heltal
     const canvas = document.getElementById("pieChart");
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext("2d"); //Möjliggör ritning av diagram på canvas. Utskrift fungerade inte utan denna.
     //Förstör befintligt diagram om det finns
     if (window.myPieChart) window.myPieChart.destroy();
     window.myPieChart = new Chart(ctx, {
@@ -690,7 +693,7 @@ function createCircleChart(top5Programs) {
 const map = (0, _leafletDefault.default).map("map").setView([
     63.1766832,
     14.636068099999989
-], 13);
+], 13); //Start pos Östersund (aka Världens hjärta)
 (0, _leafletDefault.default).tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'

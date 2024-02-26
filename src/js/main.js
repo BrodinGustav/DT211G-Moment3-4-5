@@ -1,5 +1,5 @@
 "use strict"
-
+//Navigeringsmeny
 let openBtn = document.getElementById("open-menu");
 let closeBtn = document.getElementById("close-menu");
 
@@ -20,7 +20,7 @@ else {
 }
 
 /*---------------------------------*/
-
+//Funktioner för stapel och cirkeldiagram
 //Hämta in data från Antagningsstatistik HT2023
 
 async function fetchData(){
@@ -48,7 +48,6 @@ function displayStatistics(data){
     const top6Courses = sortedCourses.slice(0, 6);
 
     //funktion för att skapa diagram
-
     createBarChart(top6Courses);
 }
 
@@ -64,12 +63,10 @@ function displayPrograms(dataPrograms){
     const top5Programs = sortedPrograms.slice(0, 5);
 
     //funktion för att skapa diagram
-
     createCircleChart(top5Programs);
 }
 
 //stapeldiagram
-
 function createBarChart(top6Courses) {
     const labels = top6Courses.map(course => course.name);
     const data = top6Courses.map(course => parseInt(course.applicantsTotal));
@@ -103,15 +100,13 @@ window.myBarChart = new Chart(ctx, {
 }); 
 }
 
-/*-----------------------------------------------------------------*/
-
 //cirkeldiagram
 function createCircleChart(top5Programs) {
     const labels = top5Programs.map(program => program.name);
-    const data = top5Programs.map(program => parseInt(program.applicantsTotal));
+    const data = top5Programs.map(program => parseInt(program.applicantsTotal)); //konverterar strängvärden från applicantsTotal till heltal
 
     const canvas = document.getElementById('pieChart');
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d'); //Möjliggör ritning av diagram på canvas. Utskrift fungerade inte utan denna.
     
     //Förstör befintligt diagram om det finns
     if(window.myPieChart) {
@@ -135,13 +130,14 @@ function createCircleChart(top5Programs) {
     /*---------------------------------------------------------------------- */
 
     //Karta
-    const map = L.map('map').setView([63.1766832, 14.636068099999989], 13);
+    const map = L.map('map').setView([63.1766832, 14.636068099999989], 13); //Start pos Östersund (aka Världens hjärta)
     
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
+//Import av sökfunktion från leaflet API (https://github.com/smeijer/leaflet-geosearch)
 import L from 'leaflet';
 import { GeoSearchControl, OpenStreetMapProvider } from 'leaflet-geosearch';
 
