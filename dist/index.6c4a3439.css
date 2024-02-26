@@ -322,6 +322,20 @@ footer {
   display: flex;
 }
 
+.searchbar {
+  margin-bottom: 1em;
+}
+
+.searchbar input[type="text"] {
+  width: 15em;
+  padding: .5em;
+  box-shadow: 1px 1px 1px #000;
+}
+
+#map {
+  height: 100vh;
+}
+
 @media screen and (width <= 320px) {
   body {
     margin: 0;

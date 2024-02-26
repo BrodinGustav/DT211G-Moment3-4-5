@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="SASS/main.scss">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
     <script src="/src/js/main.js" type="module"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,21 +57,12 @@
     <p>Du är här:</p><a href="index.html">Startsida/</a>
 </div>
     <div class="container">
-    <h2 class="gradient-heading">Humörhörnans Konstgalleri</h2>
-    <p>Konst som lockar till skratt. Vid beställning, var god kontakta oss.</p>
+    <h2 class="gradient-heading">Humörhörnans kartsektion</h2>
 </div>
-    <div class="picture-container">
-        <picture>
-         <source srcset="/bilder/sleep.jpg?as=avif&width=450" type="image/avif">
-         <source srcset="/bilder/sleep.jpg?as=webp&width=450" type="image/webp">
-         <img src="/bilder/sleep.jpg" alt="Illustration över sömnbrist" title="Sömnbrist">
-        </picture>
-           <picture>
-            <source srcset="/bilder/interest.jpg?as=avif&width=450" type="image/avif">
-            <source srcset="/bilder/interest.jpg?as=webp&width=450" type="image/webp">
-            <img src="/bilder/interest.jpg" alt="Illustration över räntehöjning" title="Räntehöjning">
-           </picture>
-    </div>
+<div class="searchbar">
+    <input type="text" placeholder="Search..">
+</div>
+<div id="map"></div>
 <footer>
     <p>Gustav Brodin</p>
     <p>DT211G</p>

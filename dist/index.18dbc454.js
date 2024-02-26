@@ -671,15 +671,31 @@ function createCircleChart(top5Programs) {
                     data: data,
                     borderWidth: 1,
                     backgroundColor: [
-                        "grey",
-                        "black",
-                        "darkred"
+                        "yellow",
+                        "blue",
+                        "green",
+                        "purple",
+                        "orange"
                     ]
                 }
             ]
         }
     });
 }
+/*---------------------------------------------------------------------- */ //Karta
+const map = L.map("map").setView([
+    63.1766832,
+    14.636068099999989
+], 13);
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+//Marker
+const marker = L.marker([
+    63.1766832,
+    14.636068099999989
+]).addTo(map);
 
 },{}]},["iqNlW","1SICI"], "1SICI", "parcelRequire9180")
 
