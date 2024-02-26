@@ -1,3 +1,5 @@
 --2024--02--16  Ordnat med layout för html med css och JS för hamburgarmeny.
 --2024--02--20  Ordnat med dark och light scheme för mediaqueries. Lagt in SASS-filer
 --2024--02--25 skapat undersida för diagram och karta samt installerat chart,js
+--2024--02--26 Skapat layout för stapel och cirkeldiagram med chart JS
+--2024--02--26 Lagt in funktion för hämtning av API och utskrivt i stapeldiagram
