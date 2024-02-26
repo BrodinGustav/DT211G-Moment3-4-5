@@ -590,9 +590,10 @@ function toggleMenu() {
     if (style.display === "none") navMenuEl.style.display = "block";
     else navMenuEl.style.display = "none";
 }
-/*---------------------------------*/ //diagram
+/*---------------------------------*/ //stapeldiagram
 document.addEventListener("DOMContentLoaded", function() {
-    const ctx = document.getElementById("myChart");
+    const canvas = document.getElementById("barChart");
+    const ctx = canvas.getContext("2d");
     new Chart(ctx, {
         type: "bar",
         data: {
@@ -606,7 +607,7 @@ document.addEventListener("DOMContentLoaded", function() {
             ],
             datasets: [
                 {
-                    label: "# of votes",
+                    label: "# of Votes",
                     data: [
                         12,
                         19,
@@ -616,6 +617,44 @@ document.addEventListener("DOMContentLoaded", function() {
                         3
                     ],
                     borderWidth: 1
+                }
+            ]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+});
+/*-----------------------------------------------------------------*/ //cirkeldiagram
+document.addEventListener("DOMContentLoaded", function() {
+    const canvas = document.getElementById("pieChart");
+    const ctx = canvas.getContext("2d");
+    new Chart(ctx, {
+        type: "pie",
+        data: {
+            labels: [
+                "Red",
+                "Blue",
+                "Yellow"
+            ],
+            datasets: [
+                {
+                    label: "# of Votes",
+                    data: [
+                        12,
+                        19,
+                        3
+                    ],
+                    borderWidth: 1,
+                    backgroundColor: [
+                        "grey",
+                        "black",
+                        "darkred"
+                    ]
                 }
             ]
         }

@@ -20,7 +20,6 @@
     "uglifyjs": "^2.4.11"
   },
   "dependencies": {
-    "chart.js": "^4.4.1",
     "uglifycss": "^0.0.29"
   }
 }

@@ -307,9 +307,19 @@ footer {
   transform: translateY(-10px);
 }
 
-#myChart {
-  width: 400px;
-  height: 400px;
+.barCavnas {
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.pieCanvas {
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin-top: 5em;
+  display: flex;
 }
 
 @media screen and (width <= 320px) {

@@ -21,20 +21,50 @@ else {
 
 /*---------------------------------*/
 
-//diagram
+//stapeldiagram
 document.addEventListener('DOMContentLoaded', function(){
 
-const ctx = document.getElementById('myChart');
+const canvas = document.getElementById('barChart');
+const ctx = canvas.getContext('2d');
 
 new Chart(ctx, {
-    type:'bar',
-    data:{
-        labels:['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets:[{
-            label:'# of votes',
-            data:[12, 19, 3, 5, 2, 3],
-            borderWidth: 1
+    type: 'bar',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
         }]
     },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+}) 
 });
-});
+
+/*-----------------------------------------------------------------*/
+
+//cirkeldiagram
+document.addEventListener('DOMContentLoaded', function(){
+
+    const canvas = document.getElementById('pieChart');
+    const ctx = canvas.getContext('2d');
+    
+    new Chart(ctx, {
+        type: 'pie',
+        data: {
+          labels: ['Red', 'Blue', 'Yellow'],
+          datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3],
+            borderWidth: 1,
+            backgroundColor: ["grey", "black", "darkred"]    
+        }]
+        },
+    });        
+    });
