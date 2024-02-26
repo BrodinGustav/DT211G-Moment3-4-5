@@ -595,7 +595,8 @@ async function fetchData() {
     try {
         const response = await fetch("https://studenter.miun.se/~mallar/dt211g/");
         const data = await response.json();
-        displayStatistics(data); //Anropa funktion med data som argument
+        displayStatistics(data); //Anropa funktion för kurser
+        displayPrograms(data); //Anropa funktion för program
     } catch (error) {
         console.error("Error", error);
     }
@@ -610,15 +611,28 @@ function displayStatistics(data) {
     //Ta ut de 6 mest sökta kurserna
     const top6Courses = sortedCourses.slice(0, 6);
     //funktion för att skapa diagram
-    createChart(top6Courses);
+    createBarChart(top6Courses);
 }
-/*---------------------------------*/ //stapeldiagram
-function createChart(top6Courses) {
+//Funktion för att visa 5 mest sökta programmen
+function displayPrograms(dataPrograms) {
+    //Filtrera ut kurser för HT2023
+    const ht23Programs = dataPrograms.filter((program)=>program.admissionRound === "HT2023" && program.type === "Program");
+    //Sortera program baserat på antalet sökande
+    const sortedPrograms = ht23Programs.sort((a, b)=>b.applicantsTotal - a.applicantsTotal);
+    //Ta ut de 5 mest sökta programmen
+    const top5Programs = sortedPrograms.slice(0, 5);
+    //funktion för att skapa diagram
+    createCircleChart(top5Programs);
+}
+//stapeldiagram
+function createBarChart(top6Courses) {
     const labels = top6Courses.map((course)=>course.name);
     const data = top6Courses.map((course)=>parseInt(course.applicantsTotal));
     const canvas = document.getElementById("barChart");
     const ctx = canvas.getContext("2d");
-    new Chart(ctx, {
+    //Förstör befintligt diagram om det finns
+    if (window.myBarChart) window.myBarChart.destroy();
+    window.myBarChart = new Chart(ctx, {
         type: "bar",
         data: {
             labels: labels,
@@ -640,25 +654,21 @@ function createChart(top6Courses) {
     });
 }
 /*-----------------------------------------------------------------*/ //cirkeldiagram
-document.addEventListener("DOMContentLoaded", function() {
+function createCircleChart(top5Programs) {
+    const labels = top5Programs.map((program)=>program.name);
+    const data = top5Programs.map((program)=>parseInt(program.applicantsTotal));
     const canvas = document.getElementById("pieChart");
     const ctx = canvas.getContext("2d");
-    new Chart(ctx, {
+    //Förstör befintligt diagram om det finns
+    if (window.myPieChart) window.myPieChart.destroy();
+    window.myPieChart = new Chart(ctx, {
         type: "pie",
         data: {
-            labels: [
-                "Red",
-                "Blue",
-                "Yellow"
-            ],
+            labels: labels,
             datasets: [
                 {
-                    label: "# of Votes",
-                    data: [
-                        12,
-                        19,
-                        3
-                    ],
+                    label: "Antal s\xf6kande",
+                    data: data,
                     borderWidth: 1,
                     backgroundColor: [
                         "grey",
@@ -669,7 +679,7 @@ document.addEventListener("DOMContentLoaded", function() {
             ]
         }
     });
-});
+}
 
 },{}]},["iqNlW","1SICI"], "1SICI", "parcelRequire9180")
 

@@ -27,7 +27,8 @@ async function fetchData(){
     try{
         const response = await fetch("https://studenter.miun.se/~mallar/dt211g/");
         const data = await response.json();
-        displayStatistics(data); //Anropa funktion med data som argument
+        displayStatistics(data); //Anropa funktion för kurser
+        displayPrograms(data); //Anropa funktion för program
     }catch (error) {
         console.error('Error', error);
     }
@@ -48,14 +49,28 @@ function displayStatistics(data){
 
     //funktion för att skapa diagram
 
-    createChart(top6Courses);
+    createBarChart(top6Courses);
 }
 
-/*---------------------------------*/
+//Funktion för att visa 5 mest sökta programmen
+function displayPrograms(dataPrograms){
+    //Filtrera ut kurser för HT2023
+    const ht23Programs = dataPrograms.filter(program => program.admissionRound === 'HT2023' && program.type === 'Program');
+
+    //Sortera program baserat på antalet sökande
+    const sortedPrograms = ht23Programs.sort((a, b) => b.applicantsTotal - a.applicantsTotal);
+
+    //Ta ut de 5 mest sökta programmen
+    const top5Programs = sortedPrograms.slice(0, 5);
+
+    //funktion för att skapa diagram
+
+    createCircleChart(top5Programs);
+}
 
 //stapeldiagram
 
-function createChart(top6Courses) {
+function createBarChart(top6Courses) {
     const labels = top6Courses.map(course => course.name);
     const data = top6Courses.map(course => parseInt(course.applicantsTotal));
 
@@ -63,7 +78,12 @@ function createChart(top6Courses) {
 const canvas = document.getElementById('barChart');
 const ctx = canvas.getContext('2d');
 
-new Chart(ctx, {
+//Förstör befintligt diagram om det finns
+if(window.myBarChart) {
+    window.myBarChart.destroy();
+}
+
+window.myBarChart = new Chart(ctx, {
     type: 'bar',
     data: {
       labels: labels,
@@ -71,7 +91,7 @@ new Chart(ctx, {
         label: 'Antal sökande',
         data: data,
         borderWidth: 1
-        }]
+        }]  
     },
     options: {
       scales: {
@@ -86,21 +106,28 @@ new Chart(ctx, {
 /*-----------------------------------------------------------------*/
 
 //cirkeldiagram
-document.addEventListener('DOMContentLoaded', function(){
+function createCircleChart(top5Programs) {
+    const labels = top5Programs.map(program => program.name);
+    const data = top5Programs.map(program => parseInt(program.applicantsTotal));
 
     const canvas = document.getElementById('pieChart');
     const ctx = canvas.getContext('2d');
     
-    new Chart(ctx, {
+    //Förstör befintligt diagram om det finns
+    if(window.myPieChart) {
+        window.myPieChart.destroy();
+    }
+
+    window.myPieChart = new Chart(ctx, {
         type: 'pie',
         data: {
-          labels: ['Red', 'Blue', 'Yellow'],
+          labels: labels,
           datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3],
+            label: 'Antal sökande',
+            data: data,
             borderWidth: 1,
-            backgroundColor: ["grey", "black", "darkred"]    
+            backgroundColor: ["grey", "black", "darkred"]        
         }]
         },
     });        
-    });
+    }
