@@ -130,6 +130,22 @@ function createCircleChart(top5Programs) {
     /*---------------------------------------------------------------------- */
 
     //Karta
+
+    function searchLocation(query) {
+        fetch(`https://nominatim.openstreetmap.org/search?q=${query}&format=json`)
+            .then(response => response.json())
+            .then(data => {
+                // Hämta resultatet och placera det på kartan
+                const result = data; 
+                const lat = result.lat;
+                const lon = result.lon;
+    
+                placeMarker(lat, lon);
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    /*
     const map = L.map('map').setView([63.1766832, 14.636068099999989], 13); //Start pos Östersund (aka Världens hjärta)
     
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -151,3 +167,4 @@ map.addControl(searchControl);
 
 //Marker
 const marker = L.marker([63.1766832, 14.636068099999989]).addTo(map);
+*/

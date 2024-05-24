@@ -74,6 +74,7 @@ nav {
 
 nav ul {
   text-align: center;
+  z-index: 1;
   width: 100%;
   margin: 0 auto;
   padding: 0;
@@ -309,16 +310,16 @@ footer {
 
 .barCavnas {
   justify-content: center;
-  width: 100%;
+  width: 60%;
   height: auto;
   display: flex;
 }
 
 .pieCanvas {
   justify-content: center;
-  width: 100%;
+  width: 60%;
   height: auto;
-  margin-top: 5em;
+  margin: 5em auto 0;
   display: flex;
 }
 
