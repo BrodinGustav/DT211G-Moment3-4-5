@@ -693,29 +693,29 @@ function searchLocation(query) {
         const lon = result.lon;
         placeMarker(lat, lon);
     }).catch((error)=>console.error("Error:", error));
-} /*
-    const map = L.map('map').setView([63.1766832, 14.636068099999989], 13); //Start pos Östersund (aka Världens hjärta)
-    
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}
+const map = L.map("map").setView([
+    63.1766832,
+    14.636068099999989
+], 13); //Start pos Östersund (aka Världens hjärta)
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19
 }).addTo(map);
-
-//Import av sökfunktion från leaflet API (https://github.com/smeijer/leaflet-geosearch)
-import L from 'leaflet';
-import { GeoSearchControl, OpenStreetMapProvider } from 'leaflet-geosearch';
-
-const provider = new OpenStreetMapProvider();
-
-const searchControl = new GeoSearchControl({
-  provider: provider,
+//Funktion för marker
+function placeMarker(lat, lon) {
+    L.marker([
+        lat,
+        lon
+    ]).addTo(map).bindPopup(`Lat: ${lat}, Lon: ${lon}`).openPopup();
+    map.setView((lat, lon, 14));
+}
+//Funktion för formulär
+const form = document.getElementById("search-form");
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    const location = document.getElementById("location-input").value;
+    searchLocation(location);
 });
-
-map.addControl(searchControl);
-
-//Marker
-const marker = L.marker([63.1766832, 14.636068099999989]).addTo(map);
-*/ 
 
 },{}]},["iqNlW","1SICI"], "1SICI", "parcelRequire9180")
 
