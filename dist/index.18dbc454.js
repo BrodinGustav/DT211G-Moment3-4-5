@@ -685,36 +685,46 @@ function createCircleChart(top5Programs) {
     });
 }
 /*---------------------------------------------------------------------- */ //Karta
-function searchLocation(query) {
-    fetch(`https://nominatim.openstreetmap.org/search?q=${query}&format=json`).then((response)=>response.json()).then((data)=>{
-        // Hämta resultatet och placera det på kartan
-        const result = data;
-        const lat = result.lat;
-        const lon = result.lon;
-        placeMarker(lat, lon);
-    }).catch((error)=>console.error("Error:", error));
-}
-const map = L.map("map").setView([
-    63.1766832,
-    14.636068099999989
-], 13); //Start pos Östersund (aka Världens hjärta)
-L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 19
-}).addTo(map);
-//Funktion för marker
-function placeMarker(lat, lon) {
-    L.marker([
-        lat,
-        lon
-    ]).addTo(map).bindPopup(`Lat: ${lat}, Lon: ${lon}`).openPopup();
-    map.setView((lat, lon, 14));
-}
-//Funktion för formulär
-const form = document.getElementById("search-form");
-form.addEventListener("submit", function(event) {
-    event.preventDefault();
-    const location = document.getElementById("location-input").value;
-    searchLocation(location);
+document.addEventListener("DOMContentLoaded", ()=>{
+    const map = L.map("map").setView([
+        63.1766832,
+        14.636068099999989
+    ], 13); //Start pos Östersund (aka Världens hjärta)
+    //tile layer från OpenStreetMap
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19
+    }).addTo(map);
+    //Hantera sökanrop
+    document.getElementById("search-form").addEventListener("submit", (e)=>{
+        e.preventDefault();
+        const query = document.getElementById("location-input").value;
+        searchLocation(query);
+    });
+    function searchLocation(query) {
+        fetch(`https://nominatim.openstreetmap.org/search?q=${query}&format=json`).then((response)=>response.json()).then((data)=>{
+            if (data && data.length > 0) {
+                const lat = data[0].lat; //hänvisasr till första elementet i arrayen
+                const lon = data[0].lon;
+                placeMarker(lat, lon);
+            } else alert("Platsen kan inte hittas.");
+        }).catch((error)=>console.error("Error", error));
+    }
+    //Funktion för marker
+    function placeMarker(lat, lon) {
+        const latitude = parseFloat(lat); //Konverterar sträng till decimaltyp. Används då användar input är sträng
+        const longitude = parseFloat(lon);
+        //Placera markör
+        L.marker([
+            latitude,
+            longitude
+        ]).addTo(map).bindPopup(`Plats: (${latitude.toFixed(5)}, ${longitude.toFixed(5)})`) //Visar 5 decimLER
+        .openPopup();
+        // Flytta kartan till den nya markörens position
+        map.setView([
+            latitude,
+            longitude
+        ], 13);
+    }
 });
 
 },{}]},["iqNlW","1SICI"], "1SICI", "parcelRequire9180")

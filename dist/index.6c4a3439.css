@@ -333,23 +333,25 @@ footer {
   display: flex;
 }
 
-#location-input {
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  width: 200px;
-  padding: 5px;
-  font-size: 14px;
+.search-container {
+  z-index: 1000;
+  gap: 10px;
+  display: flex;
+  position: absolute;
+  top: 25em;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-#search-form button {
-  color: #fff;
+#location-input {
+  padding: 10px;
+  font-size: 16px;
+}
+
+#search-btn {
   cursor: pointer;
-  background-color: #007bff;
-  border: none;
-  border-radius: 3px;
-  margin-left: 5px;
-  padding: 5px 10px;
-  font-size: 14px;
+  padding: 10px;
+  font-size: 16px;
 }
 
 #search-form button:hover {
