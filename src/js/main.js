@@ -130,24 +130,51 @@ function createCircleChart(top5Programs) {
     /*---------------------------------------------------------------------- */
 
     //Karta
+    document.addEventListener('DOMContentLoaded', () => { 
     const map = L.map('map').setView([63.1766832, 14.636068099999989], 13); //Start pos Östersund (aka Världens hjärta)
     
+    //tile layer från OpenStreetMap
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-//Import av sökfunktion från leaflet API (https://github.com/smeijer/leaflet-geosearch)
-import L from 'leaflet';
-import { GeoSearchControl, OpenStreetMapProvider } from 'leaflet-geosearch';
 
-const provider = new OpenStreetMapProvider();
-
-const searchControl = new GeoSearchControl({
-  provider: provider,
+//Hantera sökanrop
+document.getElementById("search-form").addEventListener("submit", (e) => {
+    e.preventDefault(); 
+    const query = document.getElementById("location-input").value;
+    searchLocation(query);
 });
 
-map.addControl(searchControl);
+function searchLocation(query) {
+    fetch(`https://nominatim.openstreetmap.org/search?q=${query}&format=json`)
+        .then(response => response.json())
+        .then(data => {
+            if (data && data.length > 0) {
+                const lat = data[0].lat;    //hänvisasr till första elementet i arrayen
+                const lon = data[0].lon;
+                placeMarker(lat, lon);
+            }else{
+                alert("Platsen kan inte hittas.");
+            }
+          })    
+          .catch(error => console.error("Error", error));
+        }
 
-//Marker
-const marker = L.marker([63.1766832, 14.636068099999989]).addTo(map);
+
+//Funktion för marker
+function placeMarker(lat, lon) {
+    const latitude = parseFloat(lat);   //Konverterar sträng till decimaltyp. Används då användar input är sträng
+    const longitude = parseFloat(lon);
+    
+
+//Placera markör
+L.marker([latitude, longitude]).addTo(map)
+.bindPopup(`Plats: (${latitude.toFixed(5)}, ${longitude.toFixed(5)})`)  //Visar 5 decimLER
+.openPopup();
+
+// Flytta kartan till den nya markörens position
+map.setView([latitude, longitude], 13);
+    
+}
+});

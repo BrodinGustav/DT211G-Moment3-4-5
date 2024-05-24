@@ -74,6 +74,7 @@ nav {
 
 nav ul {
   text-align: center;
+  z-index: 1;
   width: 100%;
   margin: 0 auto;
   padding: 0;
@@ -309,16 +310,16 @@ footer {
 
 .barCavnas {
   justify-content: center;
-  width: 100%;
+  width: 60%;
   height: auto;
   display: flex;
 }
 
 .pieCanvas {
   justify-content: center;
-  width: 100%;
+  width: 60%;
   height: auto;
-  margin-top: 5em;
+  margin: 5em auto 0;
   display: flex;
 }
 
@@ -327,57 +328,34 @@ footer {
   box-shadow: 1px 1px 1px #000;
 }
 
-.leaflet-control-geosearch *, .leaflet-control-geosearch :before, .leaflet-control-geosearch :after {
-  box-sizing: border-box;
+#search-form {
+  align-items: center;
+  display: flex;
 }
 
-.leaflet-control-geosearch .leaflet-bar-part, .leaflet-control-geosearch a.leaflet-bar-part:before, .leaflet-control-geosearch a.leaflet-bar-part:after, .leaflet-control-geosearch a.leaflet-bar-part:before, .leaflet-control-geosearch a.leaflet-bar-part:after {
-  display: none;
-}
-
-.leaflet-control-geosearch form {
-  z-index: -1;
-  background-color: #fff;
-  background-clip: padding-box;
-  border-radius: 0 4px 4px 0;
-  height: auto;
-  margin: 0;
+.search-container {
+  z-index: 1000;
+  gap: 10px;
+  display: flex;
   position: absolute;
-  top: 0;
-  left: 30px;
-  box-shadow: 0 1px 5px #000000a6;
+  top: 25em;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.leaflet-control-geosearch.active form {
-  display: block;
+#location-input {
+  padding: 10px;
+  font-size: 16px;
 }
 
-.leaflet-control-geosearch form input {
-  text-indent: 8px;
-  width: 100%;
-  min-width: 200px;
-  height: 30px;
-  margin: 0;
-  padding: 0;
-  font-size: 12px;
-}
-
-.leaflet-control-geosearch .results {
-  background: #fff;
-}
-
-.leaflet-control-geosearch .results > * {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  padding: 0 8px;
-  line-height: 24px;
-  overflow: hidden;
-}
-
-.leaflet-control-geosearch .results > .active, .leaflet-control-geosearch .results > :hover {
+#search-btn {
   cursor: pointer;
-  background-color: #f8f8f8;
-  border-color: #c6c6c6;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#search-form button:hover {
+  background-color: #0056b3;
 }
 
 @media screen and (width <= 320px) {
